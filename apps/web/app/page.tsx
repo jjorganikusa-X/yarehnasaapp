@@ -2,6 +2,9 @@
 
 import { useRouter } from 'next/navigation';
 import BottomNav from '@/app/components/BottomNav';
+import HeroSection from '@/app/components/HeroSection';
+import CommandCenter from '@/app/components/CommandCenter';
+import ISOVault from '@/app/components/ISOVault';
 
 export default function HomePage() {
   const router = useRouter();
@@ -36,51 +39,19 @@ export default function HomePage() {
     </header>
 
     {/* Main Content */}
-    <main className="w-full">
+    <main className="w-full px-4">
         
-        {/* Hero: Harvest Countdown */}
-        <section className="px-4 mb-8 animate-enter" style={{ animationDelay: '0.1s' }}>
-            <div className="w-full h-[420px] rounded-[32px] overflow-hidden relative shadow-soft group">
-                {/* Background Image */}
-                <img src="https://images.unsplash.com/photo-1625246333195-58f214f77812?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                     alt="Wheat Field" 
-                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-forest/90 via-forest/20 to-transparent"></div>
+        {/* Hero Section with Satellite Imagery, Live Feed & Stats */}
+        <HeroSection />
 
-                {/* Content */}
-                <div className="absolute bottom-0 left-0 w-full p-6">
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime/90 backdrop-blur-sm mb-4">
-                        <span className="w-2 h-2 rounded-full bg-forest animate-pulse"></span>
-                        <span className="text-xs font-bold text-forest uppercase tracking-wider">Live Cycle</span>
-                    </div>
+        {/* Command Center with Real-Time Metrics & Interactive Map */}
+        <CommandCenter />
 
-                    <h1 className="text-white text-3xl font-medium leading-tight mb-2">Golden Wheat<br />Harvest</h1>
-                    
-                    <p className="text-stone-200 text-sm mb-6 opacity-90">Expected yield +12% vs last season</p>
-
-                    {/* Countdown */}
-                    <div className="flex gap-3 mb-6">
-                        <div className="count-card flex-1 rounded-2xl p-3 text-center border border-white/10">
-                            <span className="block text-2xl font-bold text-lime">14</span>
-                            <span className="text-[10px] uppercase text-stone-300 tracking-wide">Days</span>
-                        </div>
-                        <div className="count-card flex-1 rounded-2xl p-3 text-center border border-white/10">
-                            <span className="block text-2xl font-bold text-lime">08</span>
-                            <span className="text-[10px] uppercase text-stone-300 tracking-wide">Hours</span>
-                        </div>
-                        <div className="count-card flex-1 rounded-2xl p-3 text-center border border-white/10">
-                            <span className="block text-2xl font-bold text-lime">45</span>
-                            <span className="text-[10px] uppercase text-stone-300 tracking-wide">Mins</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        {/* ISO Vault with CCP Monitoring & Traceability */}
+        <ISOVault />
 
         {/* Quick Access Grid (Navigation Buttons) */}
-        <section className="px-6 mb-10 animate-enter" style={{ animationDelay: '0.2s' }}>
+        <section className="mb-10 animate-enter" style={{ animationDelay: '0.2s' }}>
             <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-bold text-forest">Explore Ecosystem</h2>
                 <i className="ph ph-arrow-right text-stone-400"></i>
@@ -135,12 +106,12 @@ export default function HomePage() {
 
         {/* Breaking News: Horizontal Scroll */}
         <section className="mb-10 animate-enter" style={{ animationDelay: '0.3s' }}>
-            <div className="px-6 mb-4 flex items-center gap-2">
+            <div className="mb-4 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
                 <h2 className="text-lg font-bold text-forest">Eco-Update</h2>
             </div>
 
-            <div className="flex overflow-x-auto hide-scrollbar px-6 gap-4 pb-4 snap-x">
+            <div className="flex overflow-x-auto hide-scrollbar gap-4 pb-4 snap-x -mx-4 px-4">
                 {/* News Card 1 */}
                 <div className="min-w-[280px] snap-center bg-white rounded-3xl p-3 border border-stone-100 shadow-sm" onClick={() => router.push('/news-detail')}>
                     <div className="h-32 rounded-2xl overflow-hidden mb-3 relative">
@@ -164,7 +135,7 @@ export default function HomePage() {
         </section>
 
         {/* Philosophy Slide */}
-        <section className="px-6 mb-6 animate-enter" style={{ animationDelay: '0.4s' }}>
+        <section className="mb-6 animate-enter" style={{ animationDelay: '0.4s' }}>
             <div className="relative w-full rounded-[32px] overflow-hidden bg-forest text-white p-8 text-center" onClick={() => router.push('/philosophy')}>
                 {/* Abstract Grain/Noise Overlay */}
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'url(\'https://www.transparenttextures.com/patterns/stardust.png\')' }}></div>
