@@ -1,0 +1,277 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================
+   Mobile (Capacitor) native-feel styles
+   ========================================== */
+
+/* Hide scrollbar for native app feel */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+/* Prevent overscroll bounce (rubber banding) */
+html, body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Safe area insets (left/right only — top padding is on each page's root element) */
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Prevent text selection for native feel */
+* {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Allow text selection in inputs and textareas */
+input, textarea, [contenteditable="true"] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Smooth transitions for page changes */
+main {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+/* ==========================================
+   Custom styles extracted from design HTML
+   ========================================== */
+
+:root {
+            --app-bg: #F5F5F4; /* Stone 100 */
+            --app-surface: #FFFFFF;
+            --app-primary: #1C3322; /* Deep Forest Green */
+            --app-accent: #C2E812; /* Acid Lime for modern tech pop */
+            --app-text: #1C1917;
+            --app-text-muted: #78716C;
+        }
+
+        body {
+font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--app-bg);
+            color: var(--app-text); /* Safe area */ /* Space for nav */
+            -webkit-tap-highlight-color: transparent;
+}
+
+        /* Smooth scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .animate-enter {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .count-card {
+            background: rgba(28, 51, 34, 0.85);
+            backdrop-filter: blur(8px);
+        }
+
+:root {
+            --app-bg: #F5F5F4; /* Stone 100 */
+            --app-surface: #FFFFFF;
+            --app-primary: #1C3322; /* Deep Forest Green */
+            --app-accent: #C2E812; /* Acid Lime */
+            --app-text: #1C1917;
+            --app-text-muted: #78716C;
+        }
+
+        body {
+font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--app-bg);
+            color: var(--app-text); /* Safe area */ /* Space for nav */
+            -webkit-tap-highlight-color: transparent;
+}
+
+        /* Smooth scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-enter {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .stats-card {
+            background: linear-gradient(135deg, #1C3322 0%, #0f1c12 100%);
+        }
+
+:root {
+            --app-bg: #F5F5F4; /* Stone 100 */
+            --app-surface: #FFFFFF;
+            --app-primary: #1C3322; /* Deep Forest Green */
+            --app-accent: #C2E812; /* Acid Lime */
+            --app-text: #1C1917;
+            --app-text-muted: #78716C;
+        }
+
+        body {
+font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--app-bg);
+            color: var(--app-text); /* Safe area */ /* Space for nav */
+            -webkit-tap-highlight-color: transparent;
+}
+
+        /* Smooth scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-enter {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .impact-card {
+            background: linear-gradient(135deg, #1C3322 0%, #0f1c12 100%);
+        }
+
+:root {
+            --app-bg: #F5F5F4; /* Stone 100 */
+            --app-surface: #FFFFFF;
+            --app-primary: #1C3322; /* Deep Forest Green */
+            --app-accent: #C2E812; /* Acid Lime */
+            --app-text: #1C1917;
+            --app-text-muted: #78716C;
+        }
+
+        body {
+font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--app-bg);
+            color: var(--app-text); /* Safe area */ /* Space for nav */
+            -webkit-tap-highlight-color: transparent;
+}
+
+        /* Smooth scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-enter {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .invest-card {
+            background: linear-gradient(135deg, #1C3322 0%, #0f1c12 100%);
+        }
+
+        /* Custom Input Styling */
+        .custom-input {
+            transition: all 0.2s ease;
+        }
+        .custom-input:focus {
+            outline: none;
+            border-color: var(--app-accent);
+            box-shadow: 0 0 0 3px rgba(194, 232, 18, 0.15);
+        }
+
+:root {
+            --app-bg: #F5F5F4; /* Stone 100 */
+            --app-surface: #FFFFFF;
+            --app-primary: #1C3322; /* Deep Forest Green */
+            --app-accent: #C2E812; /* Acid Lime */
+            --app-text: #1C1917;
+            --app-text-muted: #78716C;
+        }
+
+        body {
+font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--app-bg);
+            color: var(--app-text); /* Safe area */ /* Space for nav */
+            -webkit-tap-highlight-color: transparent;
+}
+
+        /* Smooth scrolling */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-enter {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .soil-card {
+            background: linear-gradient(135deg, #1C3322 0%, #0f1c12 100%);
+        }
+
+        .iso-badge {
+            background: linear-gradient(135deg, #FFD700 0%, #FDB931 100%);
+        }
